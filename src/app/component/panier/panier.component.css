@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Couleur principale du texte */
+}
+
+.summary-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.summary-item {
+    margin-bottom: 20px;
+}
+
+.summary-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007bff; /* Couleur du titre */
+}
+
+.summary-details {
+    margin-left: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Couleur de fond pour les éléments de détail */
+.summary-details div {
+    background-color: #f1f1f1;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Couleur du texte pour les éléments de détail */
+.summary-details div {
+    color: #555;
+}
+
+/* Mise en gras des noms de menus et des catégories */
+.c , .z{
+    font-weight: bold;
+}
+
+.category-title {
+    font-weight: bold;
+}

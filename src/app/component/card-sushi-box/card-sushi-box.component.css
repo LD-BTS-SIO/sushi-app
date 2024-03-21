@@ -1,0 +1,81 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif; /* Police de caractères par défaut */
+    background-color: blue/* Couleur de fond */
+}
+
+.container {
+    max-width: 1200px; /* Largeur maximale du contenu */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 20px; /* Espacement intérieur */
+}
+
+.card-sushi-box-name {
+    background-color: black; /* Fond noir */
+    color: red; /* Police rouge */
+    padding: 5px 10px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+
+/* Styles pour les cartes sushi */
+.card-sushi {
+    background-color: #fff; /* Fond des cartes sushi */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
+    padding: 20px; /* Espacement intérieur */
+    margin-bottom: 20px; /* Espacement entre les cartes */
+}
+
+.card-sushi img {
+    width: 100%; /* Image à largeur maximale */
+    border-radius: 10px; /* Coins arrondis */
+    margin-bottom: 10px; /* Espacement sous l'image */
+}
+
+.card-sushi ul {
+    padding: 0; /* Supprime les marges par défaut */
+    list-style-type: none; /* Supprime les puces */
+}
+
+.card-sushi li {
+    margin-top: 5px; /* Espacement entre les éléments de la liste */
+}
+
+.card-sushi ul {
+    padding: 0; /* Supprime les marges par défaut */
+    list-style-type: none; /* Supprime les puces */
+}
+
+/* Pour masquer les détails au départ */
+.card-sushi ul {
+    display: none;
+}
+
+/* Styles pour les boutons */
+.button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button-green {
+    background-color: #4CAF50; /* Vert */
+    color: white;
+}
+
+.button-red {
+    background-color: #f44336; /* Rouge */
+    color: white;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button:focus {
+    outline: none;
+}

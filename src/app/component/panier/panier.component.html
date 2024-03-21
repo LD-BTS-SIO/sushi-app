@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résumé de commande</title>
+    <style>
+        .summary-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .summary-item {
+            margin-bottom: 10px;
+        }
+
+        .summary-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .summary-details {
+            margin-left: 20px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn-validate {
+            background-color: #008CBA;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="summary-container">
+        <div class="summary-item">
+            <div class="summary-title">Résumé de commande</div>
+            <div class="summary-details">
+                <div> <p class="c">Nombre de box:</p> {{ items.length }}</div>
+                <div><p class="c">Nombre total de pièces:</p> {{ getTotalPieces() }}</div>
+                <div><p class="c">Montant total du panier:</p> {{ getPrix() }}€</div>
+            </div>
+        </div>
+
+        <div class="summary-item">
+            <div class="summary-title">Détails des aliments et saveurs</div>
+            <div class="summary-details">
+                <ul>
+                    <li *ngFor="let item of items">
+                        <div class="z">{{ item.box.nom }}</div>
+                        <div>
+                            <span class="c">Quantité :</span>
+                            <button (click)="decrementQuantity(item)">-</button>
+                            {{ item.qte }}
+                            <button (click)="incrementQuantity(item)">+</button>
+                        </div>
+                        <div><img [src]="pathImage + '/' + item.box.image" alt="{{ item.box.nom }}" srcset=""></div>
+                        <div><p class="c">Saveurs:</p> {{ item.box.saveurs }}</div>
+                        <div><p class="c">Aliments:</p> <span *ngFor="let aliment of item.box.aliments">{{ aliment.quantite }} x {{ aliment.nom }} <br></span></div>
+                        <div><button (click)="removeItem(item)">Supprimer</button></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div>
+            <button class="btn btn-validate">Valider la commande</button>
+            <button class="btn" (click)="viderPanier()">Vider le panier</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

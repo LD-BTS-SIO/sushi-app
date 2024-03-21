@@ -1,0 +1,31 @@
+body {
+    background-color: blueviolet; /* Couleur de fond du corps */
+}
+
+.box-container {
+    background-color: blueviolet; /* Couleur de fond du conteneur */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espacement égal entre les lignes de cartes */
+    padding: 20px; /* Ajoutez un peu de marge intérieure pour l'espace autour des cartes */
+}
+
+.menu-box {
+    flex-basis: calc(33.33% - 20px); /* Largeur de chaque carte sushi */
+    margin-bottom: 20px; /* Espacement entre les lignes de cartes */
+    padding: 20px; /* Espacement intérieur de la carte */
+    background-color: white; /* Couleur de fond de la carte */
+    border: 2px solid orange; /* Bordure de la carte */
+    border-radius: 10px; /* Bordure arrondie */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre de la carte */
+    transition: transform 0.3s ease; /* Animation de transition */
+}
+
+.menu-box:hover {
+    transform: translateY(-5px); /* Animation de léger soulèvement au survol */
+}
+
+/* Pour supprimer la bordure droite du dernier élément de chaque ligne */
+.menu-box:nth-child(3n) {
+    margin-right: 0; /* Supprimer l'espacement à droite */
+}
