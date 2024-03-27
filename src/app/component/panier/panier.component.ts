@@ -16,7 +16,10 @@ export class PanierComponent {
 
   items: Ligne[] = []; // Tableau pour stocker les articles dans le panier
 
-  constructor(private panierService: PanierService) { }
+  constructor(private panierService: PanierService) { 
+
+    
+  }
 
   ngOnInit(): void {
     this.items = this.panierService.getItems();
@@ -48,24 +51,40 @@ export class PanierComponent {
     return total;
   }
 
+  // Méthode pour obtenir le nombre total d'articles dans le panier
+  getTotalItems() {
+    let resultat = 0;
+    for (const uneLigne of this.items) {
+      resultat += uneLigne.qte;
+    }
+    return resultat;
+  }
+
   decrementQuantity(item: Ligne) {
     if (item.qte > 1) {
-      item.qte--;
+      this.panierService.removeOneItem(item.box)
       // this.calculateTotalPieces(); // Supprimer cette ligne
+    
     }
   }
 
   incrementQuantity(item: Ligne) {
-    item.qte++;
+
+    this.panierService.addItem(item.box,1)
     // this.calculateTotalPieces(); // Supprimer cette ligne
   }
 
   removeItem(item: Ligne) {
     const index = this.items.indexOf(item);
     if (index !== -1) {
-      this.items.splice(index, 1);
-      this.panierService.removeItem(item.box);
+        this.panierService.removeItem(item.box); // Retirer tous les articles de la boîte du panier
+        this.items = this.panierService.getItems();
+        this.getTotalItems(); // Mettre à jour le nombre total d'articles dans le panier
+      }
     }
-  }
-}
+
+
   
+}
+
+ 

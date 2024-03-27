@@ -12,8 +12,8 @@
         <ul *ngIf="showDetails">
             <li *ngFor="let aliment of box.aliments"> {{ aliment.quantite }} x {{ aliment.nom }}</li>
         </ul>
-        <li style="margin-top: 0.5em; font-size: 1.2em;">Quantité dans le panier : {{ box.quantiteCommande }}</li>
-    </ul>
+        <li style="margin-top: 0.5em; font-size: 1.2em;">Quantité dans le panier : {{ getQte() }}</li>
+ </ul>
     <!-- Bouton En savoir plus -->
     <button (click)="enSavoirPlus()" class="button-blue">En savoir plus </button>
     <!-- Boutons d'ajout et de suppression -->

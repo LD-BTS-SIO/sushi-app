@@ -9,3 +9,14 @@
    background-color: grey;
   
   }
+  /* Style pour la section "Mentions légales et RGPD" */
+.politique {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;}
+
+.politique:hover {
+    text-decoration: underline; /* Soulignement au survol */
+    color: #007bff; /* Changement de couleur au survol */
+}
+
