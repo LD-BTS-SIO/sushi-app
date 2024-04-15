@@ -1,0 +1,24 @@
+<div style="margin-bottom: 2em;">
+    <div class="card-sushi-box-name">{{ box.nom }}</div>
+    <img class="card-img-top" src="{{ pathImage }}/{{ box.image }}" alt="{{ box.nom }}" style="width: 20em; margin-bottom: 0.5em;">
+    <ul style="font-weight: normal; font-size: normal; list-style-type: none;">
+        <li style="margin-top: 0.5em;">Nombre de pièces : {{ box.nbPieces }}</li>
+        <li style="margin-top: 0.5em;" *ngIf="showDetails">Saveurs :</li>
+        <ul *ngIf="showDetails">
+            <li *ngFor="let saveur of box.saveurs">{{ saveur }}</li>
+        </ul>
+        <li style="margin-top: 0.5em;">Prix : {{ box.prix }}€</li>
+        <li style="margin-top: 0.5em;" *ngIf="showDetails">Aliments :</li>
+        <ul *ngIf="showDetails">
+            <li *ngFor="let aliment of box.aliments"> {{ aliment.quantite }} x {{ aliment.nom }}</li>
+        </ul>
+        <li style="margin-top: 0.5em; font-size: 1.2em;">Quantité dans le panier : {{ getQte() }}</li>
+ </ul>
+    <!-- Bouton En savoir plus -->
+    <button (click)="enSavoirPlus()" class="button-blue">En savoir plus </button>
+    <!-- Boutons d'ajout et de suppression -->
+    <div>
+        <button (click)="add()" class="button-green">Ajouter</button>
+        <button (click)="remove()" class="button-red" style="margin-left: 10px;">Supprimer</button>
+    </div>
+</div>
