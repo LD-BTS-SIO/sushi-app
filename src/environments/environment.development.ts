@@ -1,4 +1,5 @@
 export const environment = {
-apiGetBoxes: "http://localhost:8080/api/boxes",
-apiGetImages: "http://localhost:8080/api/image"
+ apiGetBoxes: "https://ldv-sushi-api.azurewebsites.net/api/boxes",
+ apiGetImages: "https://ldv-sushi-api.azurewebsites.net/api/image"
+        
 };
