@@ -11,7 +11,7 @@
 * Il est caractérisé par le framework Angular et une API fournie par le lycée (https://github.com/ldv-melun/api-sushi)
 * Je l'ai réalisé seul
 
-== I) Création du composant *"card-sushi-box"* :
+== II) Création du composant *"card-sushi-box"* :
 Pour correspondre du mieux possible aux critères demandés par le projet, j'ai créé un premier component intitulé *"card-sushi-box"* grâce à la commande :  
 [source,lang]
 ----
@@ -271,7 +271,7 @@ J'ai définis les propriétés d'entrée *(@Input() box: any)* et de sortie *(@O
 
 Je peux conclure que chaque fichier remplit un rôle spécifique dans le développement d'un composant Angular bien structuré, en séparant clairement les préoccupations (modèle, vue, style, tests, logique métier) pour assurer la maintenabilité, la lisibilité et la testabilité du code.
 
-== II) Création du composant 
+== III) Création du composant 
 *"container-card-sushi-boxes "* :
 
 Ici ce deuxième composant a pour objectif de prendre en charge la génération des objets Boxe de notre application et d'invoquer avec une directive **ngFor* l’affichage de toutes les boxes dans son
@@ -471,7 +471,7 @@ Chaque fichier contribue à la construction d'un composant Angular bien organis�
 
 
 
-== III) Création du composant *"footer "* :
+== IV) Création du composant *"footer "* :
 
 Ce troisième composant prend en charge l’affichage du pied de page de mon application web.
 
@@ -527,7 +527,7 @@ image::assets/img/footer.png[width=500, title="Création des 4 fichiers dû à l
 Ce composant Footer démontre une bonne pratique de développement Angular, en fournissant une structure claire et modulaire pour gérer les éléments de pied de page d'une application web. La combinaison d'HTML, de CSS, de TypeScript et de tests unitaires montre une approche complète pour concevoir des composants robustes et bien conçus dans le cadre d'une application Angular
 .
 
-== IV) Création du composant *"header"* :
+== V) Création du composant *"header"* :
 
 Ce composant prend en charge l’affichage de l’entête de mon application web
 
@@ -703,23 +703,9 @@ Cette analyse met en lumière l'importance et l'utilité du composant Politique 
 
 
 
-== VII) Les "service"
 
 
-Pour créer le service d’interrogation de l'API, je vais utiliser la commande suivante:
-
-[source,lang]
-----
-ng g service service/apiSushi
-----
-
-
-
-====
-image::assets/img/service.png[width=500, title="Extrait de code de api-sush.service.ts", alt=""]
-====
-
-== Exploration du Dossier Modèle : Aliments, Box et Ligne
+== VII ) Exploration du Dossier Modèle : Aliments, Box et Ligne
 
 Dans ce dossier modèle, nous découvrons trois classes essentielles pour la représentation des données dans notre application SushiApp : Aliment, Box et Ligne. Chacune de ces classes remplit un rôle spécifique et contribue à la modélisation et à la gestion des données liées aux aliments, aux boîtes de sushi et aux lignes de commande.
 
@@ -850,7 +836,7 @@ export class Ligne {
 == Conclusion
 Cette approche de modélisation des données garantit une structure claire et maintenable pour notre application SushiApp, permettant ainsi une gestion efficace des aliments, des boîtes de sushi et des commandes. Chaque classe contribue à la représentation précise des entités métier de l'application, favorisant ainsi une meilleure organisation et une évolutivité future.
 
-== Les Services
+== VIII ) Les Services
 
 == a)  panier.service.ts
 
@@ -911,14 +897,14 @@ constructor(...): Initialise une nouvelle instance de Box avec des valeurs par d
 Relation avec Ligne :
 ** Les instances de Box sont utilisées dans les lignes du panier (Ligne), où qte représente la quantité de cette boîte spécifique dans le panier.
 
-== Conclusion
+== d) Conclusion
 
 * En résumé, le service PanierService utilise les classes Ligne et Box pour gérer de manière efficace le panier d'achats de l'application SushiApp. Les différentes classes interagissent pour permettre l'ajout, la suppression et la gestion des articles dans le panier, assurant ainsi une expérience utilisateur optimale lors de l'achat de boîtes de sushi. Chaque fichier joue un rôle spécifique dans la logique métier du panier, contribuant ainsi à la fonctionnalité globale de l'application.
 
 N'oublions pas de parler de *app.component.html*:
 
 
-== Fichiers divers 
+== IX) Fichiers divers 
 
 
 == a)  app-routing.module.ts
@@ -985,7 +971,7 @@ Ils définissent des composants, des services, des routes et des configurations 
 <app-footer></app-footer>
 ----
 
-== envronnements 
+== X) Fichiers envronnements 
 
 * Les fichiers environment.development.ts et environment.ts dans le dossier environnement sont utilisés pour configurer les variables d'environnement spécifiques à l'application Angular. 
 * Voici leur utilité et leur fonctionnement :
@@ -1031,8 +1017,9 @@ Cela garantit que les URL d'API et d'autres configurations sont spécifiques à 
 
 
 
-== index.html 
+== XI) index.html  (fichier seul)
 
+=== a) Présentation de index.html
 
 * Ce fichier index.html est le point d'entrée de votre application Angular. Il définit la structure de base de la page HTML où votre application sera rendue dans le navigateur. 
 * Voici une explication détaillée de son contenu :
@@ -1057,14 +1044,15 @@ Contient le contenu principal de la page HTML qui sera affiché dans le navigate
 ** <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>: Une autre colonne Bootstrap avec décalage (offset) pour le positionnement flexible des colonnes.
 ** Une deuxième rangée similaire est ensuite définie pour démontrer les capacités de mise en page responsive de Bootstrap.
 
-=== Utilisation de Bootstrap
+=== b)  Utilisation de Bootstrap
 * Le fichier index.html utilise les classes CSS de Bootstrap (container, row, col-*, offset-*) pour créer une mise en page responsive et fluide de votre application Angular. Ces classes facilitent le développement d'interfaces utilisateur réactives qui s'adaptent automatiquement à différentes tailles d'écrans (desktop, tablette, mobile).
 
 === Conclusion
 * En résumé, le fichier index.html définit la structure de base de votre application Angular, incluant les méta-informations, le titre, les liens vers les feuilles de style, et le point d'entrée pour le rendu de l'application Angular à l'intérieur de la balise <app-root>. Les classes CSS de Bootstrap sont utilisées pour créer une mise en page responsive et esthétique.
 
-=== main.ts
+== XII) main.ts
 
+=== a) Présentation
 * Le fichier main.ts est un fichier central dans une application Angular. Il joue un rôle crucial dans le démarrage de l'application en chargeant le module racine (AppModule) et en amorçant le processus de bootstrap pour rendre l'application Angular opérationnelle dans le navigateur. Voici une explication détaillée de son fonctionnement :
 * Fonctionnement du fichier main.ts
 Importation des modules nécessaires :
@@ -1077,7 +1065,7 @@ import { AppModule } from './app/app.module';
 ** platformBrowserDynamic: C'est une fonction fournie par Angular qui permet de démarrer une application Angular dans un environnement de navigateur (plateforme dynamique de navigateur).
 ** AppModule: C'est le module racine de l'application Angular. Ce module définit les composants, directives, services et autres fonctionnalités de l'application.
 
-*Amorçage du module racine (AppModule) :
+ === b) Amorçage du module racine (AppModule) :
 
 [source,html]
 ----
@@ -1088,7 +1076,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 ** bootstrapModule(AppModule): Cette méthode charge le module AppModule et démarre l'application Angular en le bootstrapant.
 ** .catch(err => console.error(err)): Cette partie gère les erreurs éventuelles lors du démarrage de l'application en affichant les erreurs dans la console du navigateur.
 
-=== Utilité du fichier main.ts
+=== c)  Utilité du fichier main.ts
 
 * Le fichier main.ts est le point d'entrée JavaScript de l'application Angular. Il effectue les opérations suivantes :
 
@@ -1097,16 +1085,18 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 ** Amorce le processus de démarrage de l'application en utilisant bootstrapModule, ce qui charge tous les composants et services nécessaires pour rendre l'application fonctionnelle.
 
 
-=== Conclusion
+=== d)  Conclusion
 
 * En résumé, le fichier main.ts est crucial pour le démarrage d'une application Angular. Il initialise l'environnement Angular dans le navigateur en chargeant le module racine de l'application et en amorçant le processus de bootstrap. C'est le premier fichier JavaScript exécuté lorsque l'application est lancée dans un navigateur, et il permet de transformer le code TypeScript Angular en une application web interactive et dynamique.
 
 
-== Ficher .ediorconfig
+== XIII) Ficher .ediorconfig
+
+=== a) Présentation :
 
 * Le fichier .editorconfig est utilisé pour définir et partager les conventions de style de codage entre différents éditeurs de texte et environnements de développement. Il permet de maintenir une cohérence dans le formatage du code au sein d'une équipe de développement. Voici une explication détaillée des configurations spécifiées dans ce fichier :
 
-=== Contenu du fichier .editorconfig
+=== b) Contenu du fichier .editorconfig
 * Configuration racine (root = true) :
 ** Cette directive spécifie que les configurations définies dans ce fichier s'appliquent au répertoire actuel et à ses sous-répertoires. Cela évite que les configurations d'autres fichiers .editorconfig situés dans des répertoires parents ne s'appliquent ici.
 * Configuration générale ([*]) :
@@ -1123,21 +1113,23 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 ** max_line_length = off: Désactive la limite de longueur de ligne pour les fichiers Markdown.
 ** trim_trailing_whitespace = false: Ne supprime pas les espaces en fin de ligne pour les fichiers Markdown.
 
-=== Utilité du fichier .editorconfig
+=== c) Utilité du fichier .editorconfig
 
 * Conservation de la cohérence de style : En définissant des règles de formatage claires, le fichier .editorconfig garantit que tous les membres de l'équipe utilisent des conventions de codage uniformes, ce qui facilite la lecture et la maintenance du code.
 * Compatibilité entre les éditeurs : Les configurations spécifiées dans .editorconfig sont prises en charge par de nombreux éditeurs de texte et IDEs (Integrated Development Environments), ce qui permet d'appliquer automatiquement les règles de formatage lors de l'édition du code.
 * Facilité de maintenance : En centralisant les règles de style dans un fichier .editorconfig, il est plus facile de mettre à jour et de partager les conventions de codage au sein de l'équipe, ce qui contribue à améliorer la qualité du code et la productivité.
 
-=== Conclusion 
+=== d) Conclusion 
 * En résumé, le fichier .editorconfig joue un rôle important dans le maintien de la cohérence du style de codage au sein d'un projet, en spécifiant des règles de formatage universelles qui s'appliquent à tous les fichiers du projet, quel que soit l'éditeur utilisé par les développeurs.
 
 
 
-== Fichier .gitimore
+== XIV) Fichier .gitimore
 
+=== a) Présentation
 * Le fichier .gitignore est utilisé pour spécifier les fichiers et répertoires à ignorer lors de l'indexation et de la gestion des modifications dans Git. Voici une explication détaillée des règles spécifiées dans ce fichier :
 
+== b) Explication détaillée: 
 ** Contenu du fichier .gitignore
 Compiled output (sortie compilée) :
 ** /dist: Répertoire contenant les fichiers de sortie générés lors de la compilation du projet.
@@ -1147,9 +1139,9 @@ Compiled output (sortie compilée) :
 ** npm-debug.log, yarn-error.log: Fichiers de journalisation des erreurs spécifiques à npm ou Yarn.
 ** IDEs and editors (pour les environnements de développement) :
 .idea/, .project, .classpath, .c9/, *.launch, .settings/, *.sublime-workspace: Fichiers et répertoires spécifiques aux IDEs comme IntelliJ IDEA, Eclipse, Cloud9, Sublime Text, etc.
-** Visual Studio Code :
-* .vscode/*: Fichiers de configuration spécifiques à Visual Studio Code.
-* !.vscode/settings.json, !.vscode/tasks.json, !.vscode/launch.json, !.vscode/extensions.json: Certains fichiers de configuration spécifiques à Visual Studio Code sont explicitement inclus (settings.json, tasks.json, launch.json, extensions.json).
+* Visual Studio Code :
+** .vscode/*: Fichiers de configuration spécifiques à Visual Studio Code.
+** !.vscode/settings.json, !.vscode/tasks.json, !.vscode/launch.json, !.vscode/extensions.json: Certains fichiers de configuration spécifiques à Visual Studio Code sont explicitement inclus (settings.json, tasks.json, launch.json, extensions.json).
 * Miscellaneous (divers) :
 ** /.angular/cache, /.sass-cache/: Répertoires de cache spécifiques à Angular et SASS.
 /connect.lock, /coverage, /libpeerconnection.log, testem.log, /typings: Fichiers et répertoires divers à ignorer.
@@ -1157,7 +1149,7 @@ Compiled output (sortie compilée) :
 .DS_Store: Fichier de stockage des métadonnées spécifique à macOS.
 * Thumbs.db: Fichier de cache spécifique à Windows.
  
-=== Utilité du fichier .gitignore
+=== c)  Utilité du fichier .gitignore
 
 * Ignorer les fichiers générés et temporaires : Le fichier .gitignore permet d'ignorer les fichiers et répertoires générés automatiquement lors de la compilation, de l'exécution ou de l'utilisation d'outils de développement. Cela évite d'encombrer le référentiel Git avec des fichiers non pertinents ou temporaires.
 
@@ -1165,11 +1157,11 @@ Compiled output (sortie compilée) :
 
 * Collaboration facilitée : En utilisant un fichier .gitignore bien configuré, les développeurs peuvent collaborer efficacement sur un projet sans inclure de fichiers inutiles ou indésirables dans les commits Git.
 
-=== Conclusion 
+=== d)  Conclusion 
 
 * En résumé, le fichier .gitignore est un élément important de la gestion de version Git, permettant de définir explicitement les fichiers et répertoires à exclure du suivi Git, ce qui contribue à maintenir un historique de version propre et ciblé sur les fichiers pertinents du projet.
 
-== Fichier angular.json
+==  XV) Fichier angular.json
 
 * Le fichier angular.json est utilisé par Angular CLI pour configurer divers aspects de votre projet Angular, y compris la construction, le développement, les tests, le déploiement, les dépendances, les ressources, etc.
 * Voici une explication détaillée des sections et des propriétés spécifiées dans ce fichier :
