@@ -1,9 +1,9 @@
-= Compte rendu final du projet Sushi-app
+= Compte rendu final du fichier Sushi-app
 :toc:
 
 toc::[]
 == (DARRAS Loïc BTS SIO 22)
-== (VISIBLE SUR GITHUB) lien github : https://github.com/loicD77/sushi-app
+== lien github : https://github.com/loicD77/sushi-app
 
 
 
@@ -11,19 +11,19 @@ toc::[]
 
 
 == I) Présentation:
-f
+
 * Ce projet a était le deuxième réalisé au cours de ma deuxième année en BTS SIO option SLAM. 
 * Il est caractérisé par le framework Angular et une API fournie par le lycée (https://github.com/ldv-melun/api-sushi)
 * Je l'ai réalisé seul
 
 == II) Création du composant *"card-sushi-box"* :
-Pour correspondre du mieux possible aux critères demandés par le projet, j'ai créé un premier component intitulé *"card-sushi-box"* grâce à la commande :  
+Pour correspondre du mieux possible aux critères demandés par le projet, j'ai créé un premier composant intitulé *"card-sushi-box"* grâce à la commande :  
 [source,lang]
 ----
 ng g component component/card-sushi-box
 ----
 
-Ceci nous a permis de creer quatres fichiers dans un dossier (.css, .ts, .html, .spec.ts) ayant un même nom : *"card-sushi-box"*
+Ceci m'a permis de créer quatres fichiers dans un dossier (.css, .ts, .html, .spec.ts) ayant un même nom : *"card-sushi-box"*
 
 ====
 image::assets/img/quatre.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
@@ -65,6 +65,10 @@ Ce fichier contient le *modèle HTML (la vue)* associé au *composant CardSushiB
 </div>
 ----
 
+
+====
+image::assets/img/accueilA.png[width=500, title="Accueil avec les différentes boxes", alt=""]
+====
 
 
 * Nous avons des éléments `HTML` qui composent le composant (comme les balises *<div>*, *<ul>*, *<li>*, *<button>*).
@@ -492,6 +496,11 @@ ng g component component/footer
 image::assets/img/footer.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
 ====
 
+====
+image::assets/img/footerillus.png[width=500, title="Image du footer", alt=""]
+====
+
+
 === a) footer.component.html
 
 * Le fichier HTML définit la structure visuelle et le contenu du composant Footer. Voici ce qu'il contient :
@@ -549,6 +558,11 @@ ng g component component/header
 image::assets/img/header.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
 ====
 
+====
+image::assets/img/headerZ.png[width=500, title="image du header", alt=""]
+====
+
+
 
 === a) header.component.html
 * Le fichier HTML définit la structure visuelle et le contenu du composant Header. Voici ses éléments distinctifs :
@@ -588,7 +602,7 @@ Le fichier TypeScript définit la logique métier et le comportement du composan
 Ce composant Header démontre une implémentation complète et bien structurée d'un en-tête d'application Angular, en utilisant des pratiques modernes de développement web et des fonctionnalités avancées du framework Angular pour améliorer l'expérience utilisateur. Chaque aspect du composant est soigneusement conçu pour être modulaire, réutilisable et facile à tester.
 
 
-== VI) Création du composant *"panier"* :
+== V) Création du composant *"panier"* :
 
 Nous avons utiliser la commande
 
@@ -600,6 +614,15 @@ ng g component component/panier
 ====
 image::assets/img/panier.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
 ====
+
+====
+image::assets/img/panierA.png[width=500, title="Image du panier", alt=""]
+====
+
+====
+image::assets/img/panierB.png[width=500, title="Image du panier", alt=""]
+====
+
 
 === a) panier.component.html
 * Le fichier HTML définit la structure visuelle et le contenu du composant Panier. Voici ses éléments clés :
@@ -648,7 +671,7 @@ Ce composant Panier représente une composante cruciale d'une application de com
 
 
 
-== VII) Création du composant *"politique"* :
+== VI) Création du composant *"politique"* :
 
 Nous avons utiliser la commande
 
@@ -711,7 +734,7 @@ Cette analyse met en lumière l'importance et l'utilité du composant Politique 
 
 
 
-== VIII ) Exploration du Dossier Modèle : Aliments, Box et Ligne
+== VII ) Exploration du Dossier Modèle : Aliments, Box et Ligne
 
 Dans ce dossier modèle, nous découvrons trois classes essentielles pour la représentation des données dans notre application SushiApp : Aliment, Box et Ligne. Chacune de ces classes remplit un rôle spécifique et contribue à la modélisation et à la gestion des données liées aux aliments, aux boîtes de sushi et aux lignes de commande.
 
@@ -842,7 +865,7 @@ export class Ligne {
 === h) Conclusion
 Cette approche de modélisation des données garantit une structure claire et maintenable pour notre application SushiApp, permettant ainsi une gestion efficace des aliments, des boîtes de sushi et des commandes. Chaque classe contribue à la représentation précise des entités métier de l'application, favorisant ainsi une meilleure organisation et une évolutivité future.
 
-== IX ) Les Services
+== VIII ) Les Services
 
 === a)  panier.service.ts
 
@@ -910,7 +933,7 @@ Relation avec Ligne :
 N'oublions pas de parler de *app.component.html*:
 
 
-== X) Fichiers divers 
+== IX) Fichiers divers 
 
 
 === a)  app-routing.module.ts
@@ -977,7 +1000,7 @@ Ils définissent des composants, des services, des routes et des configurations 
 <app-footer></app-footer>
 ----
 
-== XI) Fichiers envronnements 
+== X) Fichiers envronnements 
 
 * Les fichiers environment.development.ts et environment.ts dans le dossier environnement sont utilisés pour configurer les variables d'environnement spécifiques à l'application Angular. 
 * Voici leur utilité et leur fonctionnement :
@@ -1025,7 +1048,7 @@ Cela garantit que les URL d'API et d'autres configurations sont spécifiques à 
 
 
 
-== XII) index.html  (fichier seul)
+== XI) index.html  (fichier seul)
 
 === a) Présentation de index.html
 
@@ -1058,7 +1081,7 @@ Contient le contenu principal de la page HTML qui sera affiché dans le navigate
 === c) Conclusion
 * En résumé, le fichier index.html définit la structure de base de votre application Angular, incluant les méta-informations, le titre, les liens vers les feuilles de style, et le point d'entrée pour le rendu de l'application Angular à l'intérieur de la balise <app-root>. Les classes CSS de Bootstrap sont utilisées pour créer une mise en page responsive et esthétique.
 
-== XIII) main.ts
+== XII) main.ts
 
 === a) Présentation
 * Le fichier main.ts est un fichier central dans une application Angular. Il joue un rôle crucial dans le démarrage de l'application en chargeant le module racine (AppModule) et en amorçant le processus de bootstrap pour rendre l'application Angular opérationnelle dans le navigateur. Voici une explication détaillée de son fonctionnement :
@@ -1099,7 +1122,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 * En résumé, le fichier main.ts est crucial pour le démarrage d'une application Angular. Il initialise l'environnement Angular dans le navigateur en chargeant le module racine de l'application et en amorçant le processus de bootstrap. C'est le premier fichier JavaScript exécuté lorsque l'application est lancée dans un navigateur, et il permet de transformer le code TypeScript Angular en une application web interactive et dynamique.
 
 
-== XIV) Ficher .ediorconfig
+== XIII) Ficher .ediorconfig
 
 === a) Présentation :
 
@@ -1133,7 +1156,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 
 
-== XV) Fichier .gitimore
+== XIV) Fichier .gitimore
 
 === a) Présentation
 * Le fichier .gitignore est utilisé pour spécifier les fichiers et répertoires à ignorer lors de l'indexation et de la gestion des modifications dans Git. Voici une explication détaillée des règles spécifiées dans ce fichier :
@@ -1170,7 +1193,7 @@ Compiled output (sortie compilée) :
 
 * En résumé, le fichier .gitignore est un élément important de la gestion de version Git, permettant de définir explicitement les fichiers et répertoires à exclure du suivi Git, ce qui contribue à maintenir un historique de version propre et ciblé sur les fichiers pertinents du projet.
 
-==  XVI) Fichier angular.json
+==  XV) Fichier angular.json
 
 * Le fichier angular.json est utilisé par Angular CLI pour configurer divers aspects de votre projet Angular, y compris la construction, le développement, les tests, le déploiement, les dépendances, les ressources, etc.
 * Voici une explication détaillée des sections et des propriétés spécifiées dans ce fichier :
@@ -1207,7 +1230,7 @@ Autres configurations
 === c) Utilité du fichier angular.json
 * Le fichier angular.json est essentiel pour configurer et gérer le processus de construction, de développement, de test et de déploiement de mon application Angular à l'aide d'Angular CLI. Il permet de définir précisément les paramètres et les comportements attendus lors des différentes étapes du cycle de vie de développement, ce qui rend le développement plus efficace et reproductible. Chaque section et propriété du fichier *angular.json* contribue à orchestrer les différentes tâches nécessaires à la création, à la construction et à la maintenance d'une application Angular.
 
-== XVII) Fichier package.json
+== XVI) Fichier package.json
 
 * Le fichier package.json est un fichier de configuration utilisé par Node.js et npm (Node Package Manager) pour définir les métadonnées du projet, notamment son nom, sa version, les dépendances utilisées, les scripts disponibles, et d'autres informations pertinentes pour le développement et le déploiement d'une application ou d'un package JavaScript.
 
@@ -1247,7 +1270,7 @@ Autres dépendances comme rxjs, bootstrap, bootstrap-icons, etc.
 
 En résumé, le fichier package.json est crucial pour définir et gérer les dépendances, les scripts, et les métadonnées d'un projet JavaScript/TypeScript, facilitant ainsi le développement, le test et le déploiement d'une application Angular.
 
-== XVIII) Fichier tsconfig.app.json :
+== XVII) Fichier tsconfig.app.json :
  
 === a) Présentation 
 * Le fichier tsconfig.app.json est une configuration TypeScript spécifique utilisée par Angular pour compiler le code de l'application.
@@ -1275,7 +1298,7 @@ extends : Indique que ce fichier de configuration hérite des options définies 
 
 En résumé, le fichier tsconfig.app.json fournit une configuration spécifique au contexte de l'application Angular pour le processus de compilation TypeScript, en ajoutant des options supplémentaires au fichier tsconfig.json principal.
 
-== XIX) Fichier tsconfig.json :
+== XVIII) Fichier tsconfig.json :
 
 === a) Présentation :
 * Le fichier tsconfig.json est un fichier de configuration TypeScript utilisé dans un projet Angular. Il définit les options du compilateur TypeScript pour l'ensemble du projet. 
@@ -1317,7 +1340,7 @@ forceConsistentCasingInFileNames : Force la casse constante des noms de fichiers
 
 * Ce fichier tsconfig.json est essentiel pour configurer correctement le compilateur TypeScript utilisé par Angular lors du développement et de la construction de l'application.
 
-== XX) Le fichier tsconfig.spec.json :
+== XIX) Le fichier tsconfig.spec.json :
 
 * Le fichier tsconfig.spec.json est un fichier de configuration TypeScript spécifique aux tests unitaires (specs) dans un projet Angular. Il étend le fichier tsconfig.json principal en ajoutant des options spécifiques nécessaires pour la compilation des fichiers de spécification (.spec.ts).
 
@@ -1345,6 +1368,6 @@ forceConsistentCasingInFileNames : Force la casse constante des noms de fichiers
 * En résumé, le fichier tsconfig.spec.json est essentiel pour configurer le compilateur TypeScript afin de prendre en charge la compilation des fichiers de spécification (tests unitaires) dans un projet Angular, en utilisant des paramètres spécifiques et en héritant des paramètres définis dans le fichier principal tsconfig.json.
 
 
-== XXI) Grande conclusion finale:
+== XX) Grande conclusion finale:
 
 * Pour conclure sur ce projet, je l'ai trouvé personnellement intéressant, étant seul j'ai pu mieux explorer les différentes parties de celui-ci  * Cependant je reconnais qu'il serait plus facile de le réaliser avec une équipe motivée et très organisée (réalisation d'un Trello, diagramme de tâches etc...).
