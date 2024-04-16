@@ -1,12 +1,18 @@
-== Compte rendu final du fichier Sushi-app
-=== (DARRAS Loïc BTS SIO 22)
-=== lien github : https://github.com/loicD77/sushi-app
+
+= Compte rendu final du fichier Sushi-app
+:toc:
+
+toc::[]
+== (DARRAS Loïc BTS SIO 22)
+== lien github : https://github.com/loicD77/sushi-app
+
+
 
 :figure-caption!:
 
 
 == I) Présentation:
-
+f
 * Ce projet a était le deuxième réalisé au cours de ma deuxième année en BTS SIO option SLAM. 
 * Il est caractérisé par le framework Angular et une API fournie par le lycée (https://github.com/ldv-melun/api-sushi)
 * Je l'ai réalisé seul
