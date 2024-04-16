@@ -26,7 +26,7 @@ ng g component component/card-sushi-box
 Ceci m'a permis de créer quatres fichiers dans un dossier (.css, .ts, .html, .spec.ts) ayant un même nom : *"card-sushi-box"*
 
 ====
-image::assets/img/quatre.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
+image::src/assets/img/quatre.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
 ====
 
 
