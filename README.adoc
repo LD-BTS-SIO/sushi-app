@@ -1,4 +1,3 @@
-
 = Compte rendu final du fichier Sushi-app
 :toc:
 
@@ -277,8 +276,7 @@ J'ai définis les propriétés d'entrée *(@Input() box: any)* et de sortie *(@O
 
 Je peux conclure que chaque fichier remplit un rôle spécifique dans le développement d'un composant Angular bien structuré, en séparant clairement les préoccupations (modèle, vue, style, tests, logique métier) pour assurer la maintenabilité, la lisibilité et la testabilité du code.
 
-== III) Création du composant 
-*"container-card-sushi-boxes "* :
+== III) Création du composant *"container-card-sushi-boxes"* :
 
 Ici ce deuxième composant a pour objectif de prendre en charge la génération des objets Boxe de notre application et d'invoquer avec une directive **ngFor* l’affichage de toutes les boxes dans son
 template.
@@ -465,7 +463,8 @@ export class ContainerCardSushiBoxesComponent {
 * Ce fichier interagit avec le service ApiSushiService pour récupérer les données des boîtes à afficher dans le composant.
 
 
-=== Points communs :
+=== e ) Points communs entre les différents fichiers du composant :
+
 * Les fichiers TypeScript (*.ts) et les fichiers de test (*.spec.ts) dépendent de Angular et Jasmine pour les tests unitaires.
 * Ils utilisent des services Angular (ApiSushiService) pour récupérer et manipuler les données à afficher dans le composant.
 * Ils respectent le principe de séparation des préoccupations, où le fichier HTML définit la vue, le fichier CSS définit les styles, et le fichier TypeScript définit la logique métier du composant.
@@ -522,13 +521,13 @@ image::assets/img/footer.png[width=500, title="Création des 4 fichiers dû à l
 
 
 
-== Points Communs :
+=== e) Points communs entre les différents fichiers du composant :
 * Séparation des Préoccupations : Respecte le principe de séparation des préoccupations en définissant clairement les aspects de la vue, des styles et de la logique métier du composant.
 * Utilisation de Technologies Angular : Intègre des fonctionnalités Angular telles que le routage (routerLink) pour la navigation et l'interpolation ({{}}) pour l'affichage dynamique des données.
 * Style et Accessibilité : Utilise des styles CSS pour améliorer l'esthétique et l'accessibilité du composant, par exemple, en changeant la couleur et en ajoutant des effets de survol.
 * 
 
-== f) Conclusion
+=== f) Conclusion
 
 Ce composant Footer démontre une bonne pratique de développement Angular, en fournissant une structure claire et modulaire pour gérer les éléments de pied de page d'une application web. La combinaison d'HTML, de CSS, de TypeScript et de tests unitaires montre une approche complète pour concevoir des composants robustes et bien conçus dans le cadre d'une application Angular
 .
@@ -571,19 +570,20 @@ Logo et Titre : Affichage du logo et du titre de l'application (SushiApp), avec 
 
 ** Importations et Configuration : Importe les dépendances nécessaires pour les tests unitaires Angular.
 ** Test de Création : Vérifie que le composant Header est créé avec succès lors de l'initialisation du test.
+
 === d) header.component.ts
 Le fichier TypeScript définit la logique métier et le comportement du composant Header. Voici ses aspects notables :
 
 ** Gestion des Données Dynamiques : Utilisation du service PanierService pour récupérer et afficher dynamiquement le nombre d'articles dans le panier (totalItems).
 ** Cycle de Vie du Composant : Implémentation de OnInit pour initialiser le composant et souscrire aux changements du nombre d'articles dans le panier.
 
-=== e) Points Communs :
+=== e)  Points communs entre les différents fichiers du composant :
 * Séparation des Préoccupations : Le fichier HTML définit la structure, le fichier CSS définit le style, le fichier TypeScript définit la logique métier, et le fichier de spécifications définit les tests unitaires.
 * Utilisation de Frameworks et Librairies : Intégration de Bootstrap pour des styles réactifs et de jQuery pour des fonctionnalités supplémentaires (scripts externes).
 * Gestion des Événements et Données : Utilisation de Angular pour la navigation (routerLink), l'interpolation ({{}}) et la liaison de données bidirectionnelle (ngModel).
 
 
-== f) Conclusion
+=== f) Conclusion
 
 Ce composant Header démontre une implémentation complète et bien structurée d'un en-tête d'application Angular, en utilisant des pratiques modernes de développement web et des fonctionnalités avancées du framework Angular pour améliorer l'expérience utilisateur. Chaque aspect du composant est soigneusement conçu pour être modulaire, réutilisable et facile à tester.
 
@@ -633,7 +633,7 @@ Séparation des Préoccupations : Le fichier HTML définit la structure, le fich
 Utilisation de Frameworks et Librairies : Intégration de Bootstrap pour des styles réactifs et d'Angular pour des fonctionnalités avancées comme les directives (*ngFor, routerLink).
 Gestion des Événements et Données : Utilisation de directives Angular pour la liaison de données bidirectionnelle ([(ngModel)]) et de gestionnaires d'événements ((click)).
 
-== f) Conclusion
+=== f) Conclusion
 
 Ce composant Panier représente une composante cruciale d'une application de commerce électronique, illustrant l'utilisation efficace des technologies modernes comme Angular et Bootstrap pour créer une expérience utilisateur intuitive et interactive. Chaque aspect du composant est soigneusement conçu pour être modulaire, réutilisable et facile à tester, ce qui contribue à la robustesse et à la maintenabilité de l'application.
 
@@ -679,26 +679,26 @@ image::assets/img/politique.png[width=500, title="Création des 4 fichiers dû �
 ** Styles pour les Liens : Définition des couleurs et des styles des liens (a) pour une meilleure expérience utilisateur.
 Les styles contribuent à rendre le contenu plus attrayant et à garantir une cohérence visuelle avec le reste de l'application.
 
-== c) politique.component.spec.ts
+=== c) politique.component.spec.ts
 * Le fichier de spécifications (tests unitaires) pour le composant Politique. Voici ce qu'il implémente :
 
 ** Configuration des Tests : Importation des dépendances nécessaires pour les tests unitaires Angular.
 ** Test de Création : Vérification que le composant Politique est créé avec succès lors de l'initialisation du test.
 Ces tests garantissent le bon fonctionnement du composant Politique et aident à identifier les éventuels problèmes de développement.
 
-== d) politique.component.ts
+=== d) politique.component.ts
 * Le fichier TypeScript définit la logique métier et le comportement du composant Politique. Voici ses fonctionnalités principales :
 
 ** Composant Basique : Définition d'un composant simple sans logique métier complexe.
 ** Préparation pour l'Utilisation Future : Structure de base permettant d'ajouter des fonctionnalités supplémentaires si nécessaire à l'avenir.
 Bien que ce composant n'ait pas de logique métier complexe, sa présence est importante pour fournir des informations cruciales sur la politique de confidentialité de l'application.
 
-== e) Points Communs :
+=== e) Points Communs :
 Séparation des Préoccupations : Le fichier HTML définit la structure, le fichier CSS définit le style, le fichier TypeScript est basique et le fichier de spécifications garantit le bon fonctionnement du composant.
 Utilisation de Ressources Externes : Intégration de ressources visuelles (background-image) pour améliorer l'esthétique globale du composant.
 Communication de l'Information : Le composant Politique communique des informations essentielles sur la confidentialité et l'hébergement de l'application.
 
-== f) Conclusion
+=== f) Conclusion
 Ce composant Politique démontre comment fournir des informations importantes aux utilisateurs sur la gestion des données et la confidentialité, contribuant ainsi à renforcer la confiance et la transparence dans l'application.
 
 Cette analyse met en lumière l'importance et l'utilité du composant Politique dans une application Angular, ainsi que les meilleures pratiques de développement pour garantir la clarté et la cohérence dans toute l'application.
@@ -741,13 +741,13 @@ export class Aliment {
 
 ----
 
-=== Points Communs :
+=== b)  Points Communs :
 
 * Structure simple avec des propriétés de base.
 * Utilisation d'un constructeur pour initialiser les propriétés.
 
 
-== Box.ts
+=== c) Box.ts
 
 * Utilité :
 
@@ -793,12 +793,12 @@ export class Box {
 }
 ----
 
-== Points Communs :
+=== d) Points Communs A :
 
 * Plus complexe avec plusieurs propriétés et une relation avec la classe Aliment.
 * Possède un constructeur pour initialiser ses propriétés.
 
-== Ligne.ts
+=== e) Ligne.ts
 
 * Utilité :
 
@@ -826,25 +826,25 @@ export class Ligne {
 }
 
 ----
-== Points Communs :
+=== f) Points Communs B :
 
 * Représente une relation entre une quantité et une boîte de sushi (Box).
 * Utilise un constructeur pour initialiser ses propriétés.
 
 
-== Originalité :
+=== g) Originalité :
 
 * Modélisation Structurée : Chaque classe est conçue pour représenter un aspect spécifique des données (aliments, boîtes de sushi, lignes de commande).
 * Relation Entre les Classes : La classe Ligne utilise la classe Box pour représenter les boîtes de sushi associées à une commande.
 * Construction d'Instances : Les constructeurs sont utilisés pour créer de nouvelles instances avec des valeurs initiales.
 * Flexibilité et Réutilisation : Les classes sont conçues de manière à être flexibles et réutilisables, facilitant ainsi l'extension et la maintenance du code.
 
-== Conclusion
+=== h) Conclusion
 Cette approche de modélisation des données garantit une structure claire et maintenable pour notre application SushiApp, permettant ainsi une gestion efficace des aliments, des boîtes de sushi et des commandes. Chaque classe contribue à la représentation précise des entités métier de l'application, favorisant ainsi une meilleure organisation et une évolutivité future.
 
 == VIII ) Les Services
 
-== a)  panier.service.ts
+=== a)  panier.service.ts
 
 * Ce fichier définit la classe PanierService, qui est un service Angular utilisé pour gérer le panier d'achats de l'application. Voici les points clés de ce fichier :
 
@@ -872,7 +872,7 @@ viderPanier(): Vide complètement le panier.
 ** Dans le constructeur, les articles du panier sont initialisés en les récupérant depuis le localStorage.
 Le nombre total d'articles est également mis à jour et notifié à l'aide de updateTotalItems().
 
-== b) Ligne.ts
+=== b) Ligne.ts
 
 * Ce fichier définit la classe Ligne, qui représente une ligne d'article dans le panier. Voici les détails :
 
@@ -884,7 +884,7 @@ Le nombre total d'articles est également mis à jour et notifié à l'aide de u
 constructor(qte: number, box: Box): Initialise une nouvelle instance de Ligne avec une quantité et une boîte associée.
 
 
-== c)  Box.ts
+=== c)  Box.ts
 
 * Ce fichier définit la classe Box, qui représente une boîte d'aliments dans l'application. Voici ce qu'il contient :
 
@@ -903,7 +903,7 @@ constructor(...): Initialise une nouvelle instance de Box avec des valeurs par d
 Relation avec Ligne :
 ** Les instances de Box sont utilisées dans les lignes du panier (Ligne), où qte représente la quantité de cette boîte spécifique dans le panier.
 
-== d) Conclusion
+===  d) Conclusion
 
 * En résumé, le service PanierService utilise les classes Ligne et Box pour gérer de manière efficace le panier d'achats de l'application SushiApp. Les différentes classes interagissent pour permettre l'ajout, la suppression et la gestion des articles dans le panier, assurant ainsi une expérience utilisateur optimale lors de l'achat de boîtes de sushi. Chaque fichier joue un rôle spécifique dans la logique métier du panier, contribuant ainsi à la fonctionnalité globale de l'application.
 
@@ -913,7 +913,7 @@ N'oublions pas de parler de *app.component.html*:
 == IX) Fichiers divers 
 
 
-== a)  app-routing.module.ts
+=== a)  app-routing.module.ts
 
 * Ce fichier définit les routes de l'application Angular, associant chaque chemin d'URL à un composant spécifique. Il utilise le module RouterModule pour configurer les routes et le RouterModule.forRoot(routes) pour initialiser les routes principales de l'application. Les points clés incluent :
 
@@ -922,7 +922,7 @@ N'oublions pas de parler de *app.component.html*:
 ** "panier" : Chemin pour afficher le panier (PanierComponent).
 ** "politique" : Chemin pour afficher les informations sur la politique de l'entreprise (PolitiqueComponent).
 
-== b)  app.component.ts
+=== b)  app.component.ts
 
 * Ce fichier définit le composant racine de l'application (AppComponent). Voici ses caractéristiques :
 
@@ -935,11 +935,11 @@ N'oublions pas de parler de *app.component.html*:
 
 updateTotalItems(change: number): Met à jour le nombre total d'articles dans le panier en fonction d'un changement spécifié.
 
-== c) app.component.html
+=== c) app.component.html
 
 * Le fichier HTML associé au composant racine (AppComponent) définit la structure de base de l'application, utilisant <app-header>, <router-outlet> pour afficher les composants correspondant aux routes, et <app-footer>.
 
-== d)  app.module.ts
+=== d)  app.module.ts
 
 * Ce fichier définit le module principal de l'application (AppModule), qui configure les dépendances, les composants et les services. Voici ses points clés :
 
@@ -960,7 +960,7 @@ updateTotalItems(change: number): Met à jour le nombre total d'articles dans le
 
 Démarrage de l'application avec AppComponent.
 
-== e) Points communs :
+=== e) Points communs :
 * Tous ces fichiers participent à la configuration et au fonctionnement global de l'application Angular.
 Ils définissent des composants, des services, des routes et des configurations nécessaires pour exécuter l'application.
 * Ils utilisent des annotations et des imports Angular pour interagir avec le framework et configurer l'application.
@@ -982,7 +982,7 @@ Ils définissent des composants, des services, des routes et des configurations 
 * Les fichiers environment.development.ts et environment.ts dans le dossier environnement sont utilisés pour configurer les variables d'environnement spécifiques à l'application Angular. 
 * Voici leur utilité et leur fonctionnement :
 
-== environment.development.ts
+=== a) environment.development.ts
 
 * Ce fichier contient les variables d'environnement spécifiques à l'environnement de développement de l'application. Il exporte un objet environment qui peut être utilisé pour définir des variables comme des URL d'API ou d'autres constantes spécifiques à l'environnement de développement. Par exemple :
 
@@ -998,7 +998,9 @@ export const environment = {
 
 ** Fournit des valeurs spécifiques à l'environnement de développement de l'application, telles que les URL des API utilisées dans le développement local.
 ** Facilite la gestion des configurations pour les différents environnements (développement, production, etc.) sans avoir besoin de modifier directement le code source.
-== b) environment.ts
+
+=== b) environment.ts
+
 * Ce fichier est utilisé comme configuration par défaut pour l'application Angular, et il exporte également un objet environment similaire à celui de environment.development.ts. Cependant, il peut être utilisé pour les autres environnements (comme la production) ou comme une configuration générique.
 
 * Utilité :
@@ -1053,7 +1055,7 @@ Contient le contenu principal de la page HTML qui sera affiché dans le navigate
 === b)  Utilisation de Bootstrap
 * Le fichier index.html utilise les classes CSS de Bootstrap (container, row, col-*, offset-*) pour créer une mise en page responsive et fluide de votre application Angular. Ces classes facilitent le développement d'interfaces utilisateur réactives qui s'adaptent automatiquement à différentes tailles d'écrans (desktop, tablette, mobile).
 
-=== Conclusion
+=== c) Conclusion
 * En résumé, le fichier index.html définit la structure de base de votre application Angular, incluant les méta-informations, le titre, les liens vers les feuilles de style, et le point d'entrée pour le rendu de l'application Angular à l'intérieur de la balise <app-root>. Les classes CSS de Bootstrap sont utilisées pour créer une mise en page responsive et esthétique.
 
 == XII) main.ts
@@ -1071,7 +1073,8 @@ import { AppModule } from './app/app.module';
 ** platformBrowserDynamic: C'est une fonction fournie par Angular qui permet de démarrer une application Angular dans un environnement de navigateur (plateforme dynamique de navigateur).
 ** AppModule: C'est le module racine de l'application Angular. Ce module définit les composants, directives, services et autres fonctionnalités de l'application.
 
- === b) Amorçage du module racine (AppModule) :
+=== b) Amorçage du module racine (AppModule) :
+ 
 
 [source,html]
 ----
@@ -1135,7 +1138,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 === a) Présentation
 * Le fichier .gitignore est utilisé pour spécifier les fichiers et répertoires à ignorer lors de l'indexation et de la gestion des modifications dans Git. Voici une explication détaillée des règles spécifiées dans ce fichier :
 
-== b) Explication détaillée: 
+=== b) Explication détaillée: 
 ** Contenu du fichier .gitignore
 Compiled output (sortie compilée) :
 ** /dist: Répertoire contenant les fichiers de sortie générés lors de la compilation du projet.
@@ -1172,13 +1175,13 @@ Compiled output (sortie compilée) :
 * Le fichier angular.json est utilisé par Angular CLI pour configurer divers aspects de votre projet Angular, y compris la construction, le développement, les tests, le déploiement, les dépendances, les ressources, etc.
 * Voici une explication détaillée des sections et des propriétés spécifiées dans ce fichier :
 
-=== Structure générale du fichier angular.json
+=== a) Structure générale du fichier angular.json
 * $schema : Référence au schéma JSON utilisé pour valider la structure du fichier.
 * version : Version du fichier de configuration.
 * newProjectRoot : Répertoire où seront créés les nouveaux projets.
 * projects : Liste des projets Angular dans ce workspace.
 
-=== Propriétés du projet sushiApp
+=== b) Propriétés du projet sushiApp
 
 * projectType : Type de projet (ici, une application).
 * root : Répertoire racine du projet.
@@ -1201,16 +1204,16 @@ configurations : Configurations spécifiques pour production et development qui 
 Autres configurations
 * cli.analytics : Paramètre pour activer ou désactiver l'envoi de données d'analyse à Angular CLI.
 
-=== Utilité du fichier angular.json
+=== c) Utilité du fichier angular.json
 * Le fichier angular.json est essentiel pour configurer et gérer le processus de construction, de développement, de test et de déploiement de mon application Angular à l'aide d'Angular CLI. Il permet de définir précisément les paramètres et les comportements attendus lors des différentes étapes du cycle de vie de développement, ce qui rend le développement plus efficace et reproductible. Chaque section et propriété du fichier *angular.json* contribue à orchestrer les différentes tâches nécessaires à la création, à la construction et à la maintenance d'une application Angular.
 
-== Fichier package.json
+== XVI) Fichier package.json
 
 * Le fichier package.json est un fichier de configuration utilisé par Node.js et npm (Node Package Manager) pour définir les métadonnées du projet, notamment son nom, sa version, les dépendances utilisées, les scripts disponibles, et d'autres informations pertinentes pour le développement et le déploiement d'une application ou d'un package JavaScript.
 
 * Voici une explication détaillée des sections clés du fichier package.json que vous avez fourni :
 
-=== Propriétés principales :
+=== a) Propriétés principales :
 
 ** name : Nom du projet.
 ** version : Version actuelle du projet.
@@ -1221,7 +1224,7 @@ Autres configurations
 ** watch : Commande pour surveiller les modifications et recompiler en mode développement.
 ** test : Commande pour exécuter les tests unitaires (ng test).
 
-=== Autres propriétés :
+=== b) Autres propriétés :
 
 ** private : Indique si le package est privé ou non (ne doit pas être publié sur npm).
 dependencies : Liste des dépendances nécessaires pour l'exécution de l'application en production.
@@ -1233,19 +1236,20 @@ Autres dépendances comme rxjs, bootstrap, bootstrap-icons, etc.
 ** karma, jasmine-core, karma-jasmine : Outils de test pour Angular.
 ** angular-cli-ghpages : Permet de déployer l'application sur GitHub Pages via Angular CLI.
 
-=== Utilité du fichier package.json :
+=== c) Utilité du fichier package.json :
 
 * Gestion des dépendances : npm utilise ce fichier pour installer les dépendances nécessaires au projet.
 * Scripts personnalisés : Définition de commandes pour simplifier les tâches de développement (ex. npm start pour lancer le serveur de développement).
 * Versionnement : Suivi de la version du projet pour faciliter le contrôle des versions et le déploiement.
 * Configuration du projet : Fournit des métadonnées importantes sur le projet, telles que les dépendances, les commandes disponibles, les informations sur les auteurs, etc.
 
-=== Conclusion : 
+=== d) Conclusion : 
 
 En résumé, le fichier package.json est crucial pour définir et gérer les dépendances, les scripts, et les métadonnées d'un projet JavaScript/TypeScript, facilitant ainsi le développement, le test et le déploiement d'une application Angular.
 
-== Fichier tsconfig.app.json :
-
+== XVII) Fichier tsconfig.app.json :
+ 
+=== a) Présentation 
 * Le fichier tsconfig.app.json est une configuration TypeScript spécifique utilisée par Angular pour compiler le code de l'application.
 * Voici une explication détaillée des différentes sections de ce fichier :
 
@@ -1259,7 +1263,7 @@ extends : Indique que ce fichier de configuration hérite des options définies 
 * files : Liste des fichiers TypeScript à inclure dans le processus de compilation. Ici, seul src/main.ts est spécifié, ce qui indique que le point d'entrée de l'application Angular est main.ts.
 * include : Liste des motifs de fichiers à inclure dans le processus de compilation TypeScript. Dans ce cas, tous les fichiers .d.ts (fichiers de définition TypeScript) situés dans le répertoire src et ses sous-répertoires seront inclus dans la compilation.
 
-=== Utilité du fichier tsconfig.app.json :
+=== b) Utilité du fichier tsconfig.app.json :
 
 * Configuration du compilateur TypeScript : Définit les options de compilation spécifiques à l'application Angular, telles que le répertoire de sortie, les types à inclure, etc.
 
@@ -1267,12 +1271,13 @@ extends : Indique que ce fichier de configuration hérite des options définies 
 
 * Héritage des configurations globales : En utilisant extends pour pointer vers tsconfig.json, il est possible de réutiliser les options de configuration définies au niveau du projet, ce qui garantit la cohérence des paramètres de compilation à travers l'ensemble de l'application.
 
-=== Conclusion 
+=== c) Conclusion 
 
 En résumé, le fichier tsconfig.app.json fournit une configuration spécifique au contexte de l'application Angular pour le processus de compilation TypeScript, en ajoutant des options supplémentaires au fichier tsconfig.json principal.
 
-== Fichier tsconfig.json :
+== XVIII) Fichier tsconfig.json :
 
+=== a) Présentation :
 * Le fichier tsconfig.json est un fichier de configuration TypeScript utilisé dans un projet Angular. Il définit les options du compilateur TypeScript pour l'ensemble du projet. 
 * Voici une explication détaillée des différentes sections de ce fichier :
 
@@ -1297,7 +1302,7 @@ forceConsistentCasingInFileNames : Force la casse constante des noms de fichiers
 ** enableI18nLegacyMessageIdFormat : Active le format d'identifiant de message i18n hérité.
 ** strictInjectionParameters, strictInputAccessModifiers, strictTemplates : Active des contrôles stricts pour les paramètres d'injection, les modificateurs d'accès aux entrées et les templates.
 
-=== Utilité du fichier tsconfig.json :
+=== b) Utilité du fichier tsconfig.json :
 
 * Configuration du compilateur TypeScript : Définit les options de compilation TypeScript globales pour le projet Angular.
 
@@ -1308,15 +1313,15 @@ forceConsistentCasingInFileNames : Force la casse constante des noms de fichiers
 * Optimisation de la génération de code : Définit les paramètres pour générer un code JavaScript optimisé en fonction des besoins du projet.
 
 
-=== Conclusion 
+=== c) Conclusion 
 
 * Ce fichier tsconfig.json est essentiel pour configurer correctement le compilateur TypeScript utilisé par Angular lors du développement et de la construction de l'application.
 
-== Le fichier tsconfig.spec.json :
+== XIX) Le fichier tsconfig.spec.json :
 
 * Le fichier tsconfig.spec.json est un fichier de configuration TypeScript spécifique aux tests unitaires (specs) dans un projet Angular. Il étend le fichier tsconfig.json principal en ajoutant des options spécifiques nécessaires pour la compilation des fichiers de spécification (.spec.ts).
 
-=== Principales propriétés du fichier tsconfig.spec.json :
+=== a) Principales propriétés du fichier tsconfig.spec.json :
 * extends : Ce champ indique que ce fichier de configuration hérite des options définies dans tsconfig.json. Cela permet de réutiliser les paramètres globaux définis pour le projet principal.
 * compilerOptions : Cette section définit les options du compilateur TypeScript pour les fichiers de spécification (.spec.ts).
 * outDir : Spécifie le répertoire de sortie où les fichiers JavaScript compilés pour les spécifications seront générés. Ici, les fichiers seront placés dans ./out-tsc/spec.
@@ -1326,7 +1331,7 @@ forceConsistentCasingInFileNames : Force la casse constante des noms de fichiers
 * src/**/*.d.ts : Inclut tous les fichiers de définition TypeScript (.d.ts) situés dans le répertoire src et ses sous-répertoires.
 
 
-=== Utilité du fichier tsconfig.spec.json :
+=== b) Utilité du fichier tsconfig.spec.json :
 
 * Isolation des paramètres de test : Permet de spécifier des options de compilation spécifiques aux tests unitaires sans modifier les paramètres globaux du projet définis dans tsconfig.json.
 
@@ -1335,11 +1340,11 @@ forceConsistentCasingInFileNames : Force la casse constante des noms de fichiers
 * Types requis pour les tests : Déclare les types nécessaires à la compilation des tests Jasmine et des tests Angular spécifiques à la localisation.
 
 
-=== Conclusion 
+=== c) Conclusion 
 
 * En résumé, le fichier tsconfig.spec.json est essentiel pour configurer le compilateur TypeScript afin de prendre en charge la compilation des fichiers de spécification (tests unitaires) dans un projet Angular, en utilisant des paramètres spécifiques et en héritant des paramètres définis dans le fichier principal tsconfig.json.
 
 
-== Grande conclusion finale:
+== XX) Grande conclusion finale:
 
 * Pour conclure sur ce projet, je l'ai trouvé personnellement intéressant, étant seul j'ai pu mieux explorer les différentes parties de celui-ci  * Cependant je reconnais qu'il serait plus facile de le réaliser avec une équipe motivée et très organisée (réalisation d'un Trello, diagramme de tâches etc...).
