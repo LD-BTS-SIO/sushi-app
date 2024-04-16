@@ -67,7 +67,7 @@ Ce fichier contient le *modèle HTML (la vue)* associé au *composant CardSushiB
 
 
 ====
-image::assets/img/accueilA.png[width=500, title="Accueil avec les différentes boxes", alt=""]
+image::src/assets/img/accueilA.png[width=500, title="Accueil avec les différentes boxes", alt=""]
 ====
 
 
@@ -294,7 +294,7 @@ ng g component component/container-card-sushi-boxes
 
 
 ====
-image::assets/img/quatreb.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
+image::src/assets/img/quatreb.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
 ====
 
 === a) Container-card-sushi-boxes.component.html
@@ -493,11 +493,11 @@ ng g component component/footer
 ----
 
 ====
-image::assets/img/footer.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
+image::src/assets/img/footer.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
 ====
 
 ====
-image::assets/img/footerillus.png[width=500, title="Image du footer", alt=""]
+image::src/assets/img/footerillus.png[width=500, title="Image du footer", alt=""]
 ====
 
 
@@ -555,11 +555,11 @@ ng g component component/header
 ----
 
 ====
-image::assets/img/header.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
+image::src/assets/img/header.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
 ====
 
 ====
-image::assets/img/headerZ.png[width=500, title="image du header", alt=""]
+image::src/assets/img/headerZ.png[width=500, title="image du header", alt=""]
 ====
 
 
@@ -612,15 +612,15 @@ ng g component component/panier
 ----
 
 ====
-image::assets/img/panier.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
+image::src/assets/img/panier.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
 ====
 
 ====
-image::assets/img/panierA.png[width=500, title="Image du panier", alt=""]
+image::src/assets/img/panierA.png[width=500, title="Image du panier", alt=""]
 ====
 
 ====
-image::assets/img/panierB.png[width=500, title="Image du panier", alt=""]
+image::src/assets/img/panierB.png[width=500, title="Image du panier", alt=""]
 ====
 
 
@@ -682,7 +682,7 @@ ng g component component/politique
 ----
 
 ====
-image::assets/img/politique.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
+image::src/assets/img/politique.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
 ====
 
 
