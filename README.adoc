@@ -1363,4 +1363,5 @@ forceConsistentCasingInFileNames : Force la casse constante des noms de fichiers
 
 == XX) Grande conclusion finale:
 
-* Pour conclure sur ce projet, je l'ai trouvé personnellement intéressant, étant seul j'ai pu mieux explorer les différentes parties de celui-ci  * Cependant je reconnais qu'il serait plus facile de le réaliser avec une équipe motivée et très organisée (réalisation d'un Trello, diagramme de tâches etc...).
+* Pour conclure sur ce projet, je l'ai trouvé personnellement intéressant, étant seul j'ai pu mieux explorer les différentes parties de celui-ci  
+* Cependant je reconnais qu'il serait plus facile de le réaliser avec une équipe motivée et très organisée (réalisation d'un Trello, diagramme de tâches etc...).
