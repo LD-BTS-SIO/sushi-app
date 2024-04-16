@@ -930,7 +930,7 @@ Relation avec Ligne :
 
 * En résumé, le service PanierService utilise les classes Ligne et Box pour gérer de manière efficace le panier d'achats de l'application SushiApp. Les différentes classes interagissent pour permettre l'ajout, la suppression et la gestion des articles dans le panier, assurant ainsi une expérience utilisateur optimale lors de l'achat de boîtes de sushi. Chaque fichier joue un rôle spécifique dans la logique métier du panier, contribuant ainsi à la fonctionnalité globale de l'application.
 
-N'oublions pas de parler de *app.component.html*:
+
 
 
 == IX) Fichiers divers 
@@ -992,13 +992,6 @@ Ils définissent des composants, des services, des routes et des configurations 
 === f) Conclusion : 
 
 * En résumé, chaque fichier dans cet extrait contribue à différents aspects de l'application, de la configuration des routes à la gestion des composants, en passant par la définition du module principal de l'application. Ils travaillent ensemble pour créer une application fonctionnelle et structurée utilisant Angular.
-
-[source,lang]
-----
-<app-header> </app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
-----
 
 == X) Fichiers envronnements 
 
