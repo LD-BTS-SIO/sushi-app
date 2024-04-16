@@ -515,6 +515,8 @@ image::assets/img/footer.png[width=500, title="Création des 4 fichiers dû à l
 * Style et Accessibilité : Utilise des styles CSS pour améliorer l'esthétique et l'accessibilité du composant, par exemple, en changeant la couleur et en ajoutant des effets de survol.
 * 
 
+== f) Conclusion
+
 Ce composant Footer démontre une bonne pratique de développement Angular, en fournissant une structure claire et modulaire pour gérer les éléments de pied de page d'une application web. La combinaison d'HTML, de CSS, de TypeScript et de tests unitaires montre une approche complète pour concevoir des composants robustes et bien conçus dans le cadre d'une application Angular
 .
 
@@ -567,6 +569,9 @@ Le fichier TypeScript définit la logique métier et le comportement du composan
 * Utilisation de Frameworks et Librairies : Intégration de Bootstrap pour des styles réactifs et de jQuery pour des fonctionnalités supplémentaires (scripts externes).
 * Gestion des Événements et Données : Utilisation de Angular pour la navigation (routerLink), l'interpolation ({{}}) et la liaison de données bidirectionnelle (ngModel).
 
+
+== f) Conclusion
+
 Ce composant Header démontre une implémentation complète et bien structurée d'un en-tête d'application Angular, en utilisant des pratiques modernes de développement web et des fonctionnalités avancées du framework Angular pour améliorer l'expérience utilisateur. Chaque aspect du composant est soigneusement conçu pour être modulaire, réutilisable et facile à tester.
 
 
@@ -577,12 +582,57 @@ Nous avons utiliser la commande
 [source,lang]
 ----
 ng g component component/panier
-
 ----
 
 ====
 image::assets/img/panier.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
 ====
+
+=== a) panier.component.html
+* Le fichier HTML définit la structure visuelle et le contenu du composant Panier. Voici ses éléments clés :
+
+** Résumé de Commande : Affiche les détails principaux de la commande, y compris le nombre de box, le nombre total de pièces et le montant total du panier.
+** Détails des Aliments et Saveurs : Liste les détails spécifiques de chaque article dans le panier, y compris le nom de la box, la quantité, l'image, les saveurs et les aliments.
+** Interaction Utilisateur : Permet à l'utilisateur d'ajuster la quantité des articles, de supprimer des articles du panier et de vider complètement le panier.
+** Utilisation de Directives Angular : Utilisation de *ngFor pour itérer sur les articles du panier et de liaisons de données pour afficher dynamiquement les informations.
+
+=== b) panier.component.css
+* Le fichier CSS définit les styles visuels appliqués au composant Panier. Voici ses caractéristiques notables :
+
+** Mise en Forme Générale : Utilisation de couleurs, marges, bordures et ombres pour créer une interface utilisateur agréable.
+** Styles pour les Éléments Spécifiques : Différentiation visuelle des titres, détails, listes et boutons à l'aide de classes CSS spécifiques.
+** Réactivité et Légèreté : Utilisation de directives CSS pour garantir une mise en page réactive et une expérience utilisateur fluide.
+
+=== c) panier.component.spec.ts
+* Le fichier de spécifications (tests unitaires) pour le composant Panier. Voici ses caractéristiques principales :
+
+**Configuration des Tests : Importe les dépendances nécessaires pour les tests unitaires Angular.
+** Test de Création : Vérifie que le composant Panier est créé avec succès lors de l'initialisation du test.
+=== d) panier.component.ts
+* Le fichier TypeScript définit la logique métier et le comportement du composant Panier. Voici ses aspects essentiels :
+
+**  Interaction avec le Service : Utilisation du service PanierService pour gérer les opérations liées au panier, telles que l'ajout, la suppression et la mise à jour des articles.
+**  Gestion des Événements : Implémentation des méthodes pour ajuster la quantité des articles, supprimer des articles et vider le panier.
+**  Utilisation de Fonctions Auxiliaires : Définition de fonctions pour calculer le nombre total de pièces, le montant total du panier et effectuer des opérations de manipulation sur le panier.
+
+=== e) Points Communs :
+Séparation des Préoccupations : Le fichier HTML définit la structure, le fichier CSS définit le style, le fichier TypeScript définit la logique métier, et le fichier de spécifications définit les tests unitaires.
+Utilisation de Frameworks et Librairies : Intégration de Bootstrap pour des styles réactifs et d'Angular pour des fonctionnalités avancées comme les directives (*ngFor, routerLink).
+Gestion des Événements et Données : Utilisation de directives Angular pour la liaison de données bidirectionnelle ([(ngModel)]) et de gestionnaires d'événements ((click)).
+
+== f) Conclusion
+
+Ce composant Panier représente une composante cruciale d'une application de commerce électronique, illustrant l'utilisation efficace des technologies modernes comme Angular et Bootstrap pour créer une expérience utilisateur intuitive et interactive. Chaque aspect du composant est soigneusement conçu pour être modulaire, réutilisable et facile à tester, ce qui contribue à la robustesse et à la maintenabilité de l'application.
+
+
+
+
+
+
+
+
+
+
 
 
 == VI) Création du composant *"politique"* :
@@ -598,6 +648,53 @@ ng g component component/politique
 ====
 image::assets/img/politique.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
 ====
+
+
+=== a) politique.component.html
+* Le fichier HTML définit la structure et le contenu informatif du composant Politique. Voici un aperçu de ses points clés :
+
+** À Propos de l'Entreprise : Section décrivant les solutions logicielles utilisées dans les restaurants Sushi-Delight, développées par la filière SIO du lycée Léonard de Vinci.
+** Version Locale et En Ligne : Informations sur la manière dont l'application est déployée localement dans les restaurants et en ligne pour les utilisateurs finaux.
+** Hébergement de l'Application : Détails sur l'hébergement du frontend sur GitHub et de la base de données avec LWS.
+** Chaque section est présentée de manière claire et concise, fournissant des informations importantes sur la gestion des données et la confidentialité des utilisateurs.
+
+=== b) politique.component.css
+* Le fichier CSS définit les styles visuels appliqués au composant Politique. Voici ses caractéristiques principales :
+
+** Mise en Forme Générale : Utilisation de couleurs de fond, de marges, de paddings et de bordures pour améliorer la lisibilité et l'esthétique.
+** Styles pour les Titres et Paragraphes : Différentiation visuelle des titres (h1, h2, h3) et des paragraphes (p) pour une meilleure organisation visuelle.
+** Styles pour les Liens : Définition des couleurs et des styles des liens (a) pour une meilleure expérience utilisateur.
+Les styles contribuent à rendre le contenu plus attrayant et à garantir une cohérence visuelle avec le reste de l'application.
+
+== c) politique.component.spec.ts
+* Le fichier de spécifications (tests unitaires) pour le composant Politique. Voici ce qu'il implémente :
+
+** Configuration des Tests : Importation des dépendances nécessaires pour les tests unitaires Angular.
+** Test de Création : Vérification que le composant Politique est créé avec succès lors de l'initialisation du test.
+Ces tests garantissent le bon fonctionnement du composant Politique et aident à identifier les éventuels problèmes de développement.
+
+== d) politique.component.ts
+* Le fichier TypeScript définit la logique métier et le comportement du composant Politique. Voici ses fonctionnalités principales :
+
+** Composant Basique : Définition d'un composant simple sans logique métier complexe.
+** Préparation pour l'Utilisation Future : Structure de base permettant d'ajouter des fonctionnalités supplémentaires si nécessaire à l'avenir.
+Bien que ce composant n'ait pas de logique métier complexe, sa présence est importante pour fournir des informations cruciales sur la politique de confidentialité de l'application.
+
+== e) Points Communs :
+Séparation des Préoccupations : Le fichier HTML définit la structure, le fichier CSS définit le style, le fichier TypeScript est basique et le fichier de spécifications garantit le bon fonctionnement du composant.
+Utilisation de Ressources Externes : Intégration de ressources visuelles (background-image) pour améliorer l'esthétique globale du composant.
+Communication de l'Information : Le composant Politique communique des informations essentielles sur la confidentialité et l'hébergement de l'application.
+
+== f) Conclusion
+Ce composant Politique démontre comment fournir des informations importantes aux utilisateurs sur la gestion des données et la confidentialité, contribuant ainsi à renforcer la confiance et la transparence dans l'application.
+
+Cette analyse met en lumière l'importance et l'utilité du composant Politique dans une application Angular, ainsi que les meilleures pratiques de développement pour garantir la clarté et la cohérence dans toute l'application.
+
+
+
+
+
+
 
 == VII) Les "service"
 
@@ -615,8 +712,201 @@ ng g service service/apiSushi
 image::assets/img/service.png[width=500, title="Extrait de code de api-sush.service.ts", alt=""]
 ====
 
+== Exploration du Dossier Modèle : Aliments, Box et Ligne
+
+Dans ce dossier modèle, nous découvrons trois classes essentielles pour la représentation des données dans notre application SushiApp : Aliment, Box et Ligne. Chacune de ces classes remplit un rôle spécifique et contribue à la modélisation et à la gestion des données liées aux aliments, aux boîtes de sushi et aux lignes de commande.
+
+=== a) Aliment.ts
+
+* Utilité :
+
+** Aliment modélise un objet aliment, tel qu'un sushi ou une soupe.
+
+* Fonctionnement :
+
+** La classe Aliment comporte deux propriétés : nom (le nom de l'aliment) et quantite (le nombre d'aliments placés dans une boîte).
+** Le constructeur permet de créer une nouvelle instance d'Aliment en initialisant ces propriétés.
 
 
+[source,lang]
+----
+export class Aliment {
+    nom: string;
+    quantite: number;
+
+    constructor(nom: string, quantite: number) {
+        this.nom = nom;
+        this.quantite = quantite;
+    }
+}
+
+----
+
+=== Points Communs :
+
+* Structure simple avec des propriétés de base.
+* Utilisation d'un constructeur pour initialiser les propriétés.
+
+
+== Box.ts
+
+* Utilité :
+
+** Box modélise une boîte qui contient des aliments (sushi) et qui peut être placée dans un panier de commande.
+
+
+* Fonctionnement :
+
+** La classe Box contient plusieurs propriétés décrivant une boîte de sushi, comme id, nom, nbPieces, prix, image, aliments, et saveurs.
+** Le constructeur permet de créer une nouvelle instance de Box avec des valeurs par défaut ou spécifiées.
+Code :
+
+[source,lang]
+----
+import { Aliment } from "./Aliment";
+
+export class Box {
+    id: number;
+    nom: string;
+    nbPieces: number;
+    prix: number;
+    image: string;
+    aliments: Aliment[];
+    saveurs: string[];
+
+    constructor(
+        id: number = 0,
+        nom: string = "",
+        nbPieces: number = 0,
+        prix: number = 0.0,
+        image: string = "",
+        aliments: Aliment[] = [],
+        saveurs: string[] = []
+    ) {
+        this.id = id;
+        this.nom = nom;
+        this.nbPieces = nbPieces;
+        this.prix = prix;
+        this.image = image;
+        this.aliments = aliments;
+        this.saveurs = saveurs;
+    }
+}
+----
+
+== Points Communs :
+
+* Plus complexe avec plusieurs propriétés et une relation avec la classe Aliment.
+* Possède un constructeur pour initialiser ses propriétés.
+
+== Ligne.ts
+
+* Utilité :
+
+** Ligne représente une ligne de commande associée à une boîte de sushi et à une quantité.
+
+* Fonctionnement :
+
+** La classe Ligne contient deux propriétés : qte (quantité de boîtes commandées) et box (la boîte de sushi associée à la ligne de commande).
+** Le constructeur permet de créer une nouvelle instance de Ligne en spécifiant la quantité et la boîte de sushi.
+
+
+[source,lang]
+----
+
+import { Box } from "./Box";
+
+export class Ligne {
+    qte: number;
+    box: Box;
+
+    constructor(qte: number, box: Box) {
+        this.qte = qte;
+        this.box = box;
+    }
+}
+
+----
+== Points Communs :
+
+* Représente une relation entre une quantité et une boîte de sushi (Box).
+* Utilise un constructeur pour initialiser ses propriétés.
+
+
+== Originalité :
+
+* Modélisation Structurée : Chaque classe est conçue pour représenter un aspect spécifique des données (aliments, boîtes de sushi, lignes de commande).
+* Relation Entre les Classes : La classe Ligne utilise la classe Box pour représenter les boîtes de sushi associées à une commande.
+* Construction d'Instances : Les constructeurs sont utilisés pour créer de nouvelles instances avec des valeurs initiales.
+* Flexibilité et Réutilisation : Les classes sont conçues de manière à être flexibles et réutilisables, facilitant ainsi l'extension et la maintenance du code.
+
+== Conclusion
+Cette approche de modélisation des données garantit une structure claire et maintenable pour notre application SushiApp, permettant ainsi une gestion efficace des aliments, des boîtes de sushi et des commandes. Chaque classe contribue à la représentation précise des entités métier de l'application, favorisant ainsi une meilleure organisation et une évolutivité future.
+
+== Les Services
+
+== a)  panier.service.ts
+
+* Ce fichier définit la classe PanierService, qui est un service Angular utilisé pour gérer le panier d'achats de l'application. Voici les points clés de ce fichier :
+
+** Définition de la Classe PanierService:
+
+La classe PanierService est décorée avec @Injectable({ providedIn: 'root' }), ce qui signifie qu'elle peut être injectée de manière globale dans toute l'application.
+** Propriétés :
+
+* private _totalItems: BehaviorSubject<number> : Un BehaviorSubject utilisé pour suivre le nombre total d'articles dans le panier.
+* totalItems$: Un observable exposant _totalItems pour écouter les changements de total.
+
+* Méthodes :
+
+** addItem(uneBox: Box, qte: number): Ajoute une boîte spécifique avec une quantité donnée au panier.
+** removeOneItem(uneBox: Box): Diminue la quantité d'une boîte dans le panier.
+** removeItem(box: Box): Supprime complètement une boîte du panier.
+** updateTotalItems(): Met à jour le nombre total d'articles dans le panier.
+viderPanier(): Vide complètement le panier.
+** getItems(): Récupère les articles actuellement présents dans le panier.
+** getTotalItems(): Calcule le nombre total d'articles dans le panier.
+** getQteBox(uneBox: Box): Récupère la quantité d'une boîte spécifique dans le panier.
+
+* Initialisation :
+
+** Dans le constructeur, les articles du panier sont initialisés en les récupérant depuis le localStorage.
+Le nombre total d'articles est également mis à jour et notifié à l'aide de updateTotalItems().
+
+== b) Ligne.ts
+
+* Ce fichier définit la classe Ligne, qui représente une ligne d'article dans le panier. Voici les détails :
+
+* Propriétés :
+
+** qte: number: La quantité d'une boîte spécifique dans le panier.
+** box: Box: La boîte associée à cette ligne dans le panier.
+** Constructeur :
+constructor(qte: number, box: Box): Initialise une nouvelle instance de Ligne avec une quantité et une boîte associée.
+
+
+== c)  Box.ts
+
+* Ce fichier définit la classe Box, qui représente une boîte d'aliments dans l'application. Voici ce qu'il contient :
+
+* Propriétés :
+
+** id: number: L'identifiant unique de la boîte.
+** nom: string: Le nom de la boîte.
+nbPieces: number: Le nombre de pièces/aliments dans la boîte.
+** prix: number: Le prix unitaire de la boîte.
+image: string: Le nom du fichier image représentant la boîte.
+** aliments: Aliment[]: La liste des aliments contenus dans la boîte.
+**saveurs: string[]: La liste des saveurs principales de la boîte.
+** quantiteCommande: number: Le nombre de fois que cette boîte a été commandée.
+** Constructeur :
+constructor(...): Initialise une nouvelle instance de Box avec des valeurs par défaut ou spécifiées.
+Relation avec Ligne :
+** Les instances de Box sont utilisées dans les lignes du panier (Ligne), où qte représente la quantité de cette boîte spécifique dans le panier.
+
+== Conclusion
+
+* En résumé, le service PanierService utilise les classes Ligne et Box pour gérer de manière efficace le panier d'achats de l'application SushiApp. Les différentes classes interagissent pour permettre l'ajout, la suppression et la gestion des articles dans le panier, assurant ainsi une expérience utilisateur optimale lors de l'achat de boîtes de sushi. Chaque fichier joue un rôle spécifique dans la logique métier du panier, contribuant ainsi à la fonctionnalité globale de l'application.
 
 N'oublions pas de parler de *app.component.html*:
 
