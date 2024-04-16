@@ -11,7 +11,6 @@ toc::[]
 
 
 == I) Présentation:
-f
 * Ce projet a était le deuxième réalisé au cours de ma deuxième année en BTS SIO option SLAM. 
 * Il est caractérisé par le framework Angular et une API fournie par le lycée (https://github.com/ldv-melun/api-sushi)
 * Je l'ai réalisé seul
