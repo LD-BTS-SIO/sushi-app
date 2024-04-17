@@ -1,4 +1,4 @@
-= Compte rendu final du dossier Sushi-app
+= Compte rendu final du projet Sushi-app
 :toc:
 
 toc::[]
