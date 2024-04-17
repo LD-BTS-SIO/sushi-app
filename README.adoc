@@ -685,7 +685,7 @@ ng g component component/politique
 image::src/assets/img/politique.png[width=500,title="Création des 4 fichiers dû à la commande", alt=""]
 ====
 ====
-image::src/assets/img/rgpd.png[width=500, title="Mentions légaleset RGPD"", alt=""]
+image::src/assets/img/rgpd.png[width=500, title="Mentions légales et RGPD"", alt=""]
 ====
 
 === a) politique.component.html
