@@ -1047,7 +1047,7 @@ Cela garantit que les URL d'API et d'autres configurations sont spécifiques à 
 
 === a) Présentation de index.html
 
-* Ce fichier index.html est le point d'entrée de votre application Angular. Il définit la structure de base de la page HTML où votre application sera rendue dans le navigateur. 
+* Ce fichier index.html est le point d'entrée de notre application Angular. Il définit la structure de base de la page HTML où votre application sera rendue dans le navigateur. 
 * Voici une explication détaillée de son contenu :
 
 ** Structure du fichier index.html
