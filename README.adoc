@@ -1062,7 +1062,7 @@ Contient des métadonnées sur le document HTML, comme l'encodage de caractères
 ** <base routerLink="/" routerLinkActive="active">: Définit la balise <base> pour spécifier l'URL de base utilisée pour résoudre les URL relatives dans le document. Les directives routerLink et routerLinkActive sont utilisées par Angular pour la navigation et la gestion des liens actifs.
 ** Balise <body>
 Contient le contenu principal de la page HTML qui sera affiché dans le navigateur.
-** <app-root>: C'est le sélecteur du composant racine (AppComponent) de votre application Angular. Tout le contenu de l'application Angular sera rendu à l'intérieur de cette balise.
+** <app-root>: C'est le sélecteur du composant racine (AppComponent) de notre application Angular. Tout le contenu de l'application Angular sera rendu à l'intérieur de cette balise.
 ** <p>Contenu à l'intérieur de l'app-root</p>: Un exemple de contenu HTML qui sera affiché à l'intérieur du composant racine.
 ** <div class="container text-center">: Un conteneur Bootstrap qui utilise des classes CSS pour centrer le contenu horizontalement.
 <div class="row">: Une ligne Bootstrap pour organiser les éléments en colonnes responsives.
@@ -1071,10 +1071,10 @@ Contient le contenu principal de la page HTML qui sera affiché dans le navigate
 ** Une deuxième rangée similaire est ensuite définie pour démontrer les capacités de mise en page responsive de Bootstrap.
 
 === b)  Utilisation de Bootstrap
-* Le fichier index.html utilise les classes CSS de Bootstrap (container, row, col-*, offset-*) pour créer une mise en page responsive et fluide de votre application Angular. Ces classes facilitent le développement d'interfaces utilisateur réactives qui s'adaptent automatiquement à différentes tailles d'écrans (desktop, tablette, mobile).
+* Le fichier index.html utilise les classes CSS de Bootstrap (container, row, col-*, offset-*) pour créer une mise en page responsive et fluide de notre application Angular. Ces classes facilitent le développement d'interfaces utilisateur réactives qui s'adaptent automatiquement à différentes tailles d'écrans (desktop, tablette, mobile).
 
 === c) Conclusion
-* En résumé, le fichier index.html définit la structure de base de votre application Angular, incluant les méta-informations, le titre, les liens vers les feuilles de style, et le point d'entrée pour le rendu de l'application Angular à l'intérieur de la balise <app-root>. Les classes CSS de Bootstrap sont utilisées pour créer une mise en page responsive et esthétique.
+* En résumé, le fichier index.html définit la structure de base de notre application Angular, incluant les méta-informations, le titre, les liens vers les feuilles de style, et le point d'entrée pour le rendu de l'application Angular à l'intérieur de la balise <app-root>. Les classes CSS de Bootstrap sont utilisées pour créer une mise en page responsive et esthétique.
 
 == XII) main.ts
 
