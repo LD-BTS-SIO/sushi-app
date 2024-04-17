@@ -684,7 +684,9 @@ ng g component component/politique
 ====
 image::src/assets/img/politique.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
 ====
-
+====
+image::src/assets/img/rgpd.png[width=500, title="Création des 4 fichiers dû à la commande", alt=""]
+====
 
 === a) politique.component.html
 * Le fichier HTML définit la structure et le contenu informatif du composant Politique. Voici un aperçu de ses points clés :
