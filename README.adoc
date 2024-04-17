@@ -1047,7 +1047,7 @@ Cela garantit que les URL d'API et d'autres configurations sont spécifiques à 
 
 === a) Présentation de index.html
 
-* Ce fichier index.html est le point d'entrée de notre application Angular. Il définit la structure de base de la page HTML où votre application sera rendue dans le navigateur. 
+* Ce fichier index.html est le point d'entrée de notre application Angular. Il définit la structure de base de la page HTML où notre application sera rendue dans le navigateur. 
 * Voici une explication détaillée de son contenu :
 
 ** Structure du fichier index.html
@@ -1190,7 +1190,7 @@ Compiled output (sortie compilée) :
 
 ==  XV) Fichier angular.json
 
-* Le fichier angular.json est utilisé par Angular CLI pour configurer divers aspects de votre projet Angular, y compris la construction, le développement, les tests, le déploiement, les dépendances, les ressources, etc.
+* Le fichier angular.json est utilisé par Angular CLI pour configurer divers aspects de notre projet Angular, y compris la construction, le développement, les tests, le déploiement, les dépendances, les ressources, etc.
 * Voici une explication détaillée des sections et des propriétés spécifiées dans ce fichier :
 
 === a) Structure générale du fichier angular.json
