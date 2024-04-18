@@ -484,7 +484,7 @@ Chaque fichier contribue à la construction d'un composant Angular bien organis�
 
 Ce troisième composant prend en charge l’affichage du pied de page de mon application web.
 
-Nous avons utiliser la commande
+Nous avons utilisé la commande
 
 [source,lang]
 ----
@@ -673,7 +673,7 @@ Ce composant Panier représente une composante cruciale d'une application de com
 
 == VI) Création du composant *"politique"* :
 
-Nous avons utiliser la commande
+J'ai utilisé la commande
 
 [source,lang]
 ----
